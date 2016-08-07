@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+ 
+  .main{
+        margin: 0 auto;
+        width: 622px;
+        height: 580px;
+        position:relative;
+  }
+  .saat{
+  	width:250px;
+  	height:6px;
+  	background:black;
+  		left:50%;
+	top:50%;
+	position:absolute;
+	transform-origin:0% 0%;
+    
+  }
+.deqiqe{
+	width:225px;
+	height:8px;
+	background:black;
+    left:50%;
+	top:50%;
+	position:absolute;
+	transform-origin:0% 0%;
+}
+.saniye{
+	width:230px;
+	height:2px;
+	background:red;
+	left:50%;
+	top:50%;
+	position:absolute;
+	transform-origin:0% 0%;
+}
+</style>
+	<title>saat</title>
+</head>
+<body>
+
+<div class="main"><img src="saat.png">
+<div class="saat"></div>
+<div class="deqiqe"></div>
+<div class="saniye"></div>
+</div>
+
+<script type="text/javascript">
+var myClock=setInterval(saat,1000);
+function saat() {
+	var myDate=new Date();
+	var san=6 * myDate.getSeconds();
+    var deqiqe=6*myDate.getMinutes();
+    var saat=30*myDate.getHours();
+document.getElementsByClassName('saniye')[0].style.transform="rotate("+san+"deg)"
+   document.getElementsByClassName('deqiqe')[0].style.transform="rotate("+deqiqe+"deg)"
+document.getElementsByClassName('saat')[0].style.transform="rotate("+saat+"deg)"
+	
+}
+</script>
+
+</body>
+</html>
